@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(187, 128, 255);
+  font-size: 30px;
+  font-family: calibri;
+}
+
+/* Header styles------------------------------------------------ */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: rgb(210, 210, 210);
+}
+
+.header ul{
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: blue;
+}
+
