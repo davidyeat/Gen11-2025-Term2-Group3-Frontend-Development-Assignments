@@ -1,0 +1,52 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  list-style: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #740970;
+  --secondary-color: #6E026F;
+  --background-color: #F5F5F5;
+  --card-background: #FCFBFB;
+  --header-background: #BBBBBB;
+  --text-color: #312F30;
+  --headline-color: #1A1A1A;
+}
+
+html, body {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+
+.hero-image {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-image img {
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+}
+
+

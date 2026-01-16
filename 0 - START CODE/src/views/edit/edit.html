@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/edit.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <title>Edit Questions</title>
+    <!-- Boxicons CSS -->
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Navbar ----------------------------------------------->
+    <div class="edit-container">
+        <div class="quiz-container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="../../assets/logo.png" alt="Quiz Logo">
+                    <h1>Quiz App</h1>
+                </div>
+                <ul>
+                    <li><a href="#" class="active" id="edit">Edit Quiz</a></li>
+                    <li><a href="#" id="play">Play Quiz</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Edit Content -------------------------------------->
+        <div class="edit-content">
+            <div class="edit-header">
+                <button id="add-question-btn">Add Question</button>
+            </div>
+            <div class="question-list">
+                <div class="question-item">
+                    <p>What does HTML stand for?</p>
+                    <div class="features">
+                        <i class='bxr bx-edit edit-question'></i> 
+                        <i class='bxr bx-trash delete-question'></i> 
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p>What does CSS stand for?</p>
+                    <div class="features">
+                        <i class='bxr bx-edit edit-question'></i> 
+                        <i class='bxr bx-trash delete-question'></i> 
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p>What does JavaScript stand for?</p>
+                    <div class="features">
+                        <i class='bxr bx-edit edit-question'></i> 
+                        <i class='bxr bx-trash delete-question'></i> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Adding Question -------------------------->
+        <dialog id="question-modal">
+            <div class="modal-header">
+                <h2>Create New Question</h2>
+            </div>
+            <div class="modal-body">
+                <label for="q-title">Title</label>
+                <input type="text" id="q-title" placeholder="Question title">
+
+                <label for="q-answer">Answer</label>
+                <input type="text" class="q-answer" placeholder="Answer A">
+                <input type="text" class="q-answer" placeholder="Answer B">
+                <input type="text" class="q-answer" placeholder="Answer C">
+                <input type="text" class="q-answer" placeholder="Answer D">
+            </div>
+            <div class="modal-footer">
+                <button id="cancel-btn">Cancel</button>
+                <button id="create-btn">Create</button>
+            </div>
+        </dialog>
+    </div>
+
+    <script src="edit.js"></script>
+</body>
+</html>

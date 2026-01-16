@@ -1,3 +1,6 @@
+import {loadNavbar} from '../../js/navbar.js';
+loadNavbar("play");
+
 // DOMS ELEMENTS  ---------------------------------------------------------
 const dom_quiz = document.querySelector("#quiz");
 const dom_question = document.querySelector("#question");

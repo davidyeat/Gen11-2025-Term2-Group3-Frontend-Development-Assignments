@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz App</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="src/css/navbar.css">
+
+    <!-- Google Fonts Preconnect and Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="quiz-container">
-        <header class="header" id="header">
-            <div class="logo">Quiz App</div>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="src/assets/logo.png" alt="Quiz Logo">
+                <h1>Quiz App</h1>
+            </div>
             <ul>
-                <li><a href="#" class="btn" id="edit">Edit Quiz</a></li>
-                <li><a href="#" class="btn" id="play">Play Game</a></li>
+                <li><a href="src/views/edit/edit.html" class="btn" id="edit">Edit Quiz</a></li>
+                <li><a href="src/views/play/play.html" class="btn" id="play">Play Quiz</a></li>
             </ul>
-        </header>
-        <div class="img">
-            <img src="" alt="">
+        </nav>
+        <div class="hero-image">
+            <img src="src/assets/hero-image.png" alt="Hero Image">
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>

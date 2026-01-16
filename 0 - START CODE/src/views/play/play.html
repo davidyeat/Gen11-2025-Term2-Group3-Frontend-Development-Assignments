@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Quiz</title>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="../../css/play.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+
+    <!-- Google Fonts Preconnect and Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../../assets/logo.png" alt="Quiz Logo">
+                <h1>Quiz App</h1>
+            </div>
+            <ul>
+                <li><a href="../../index.html" id="edit">Edit Quiz</a></li>
+                <li><a href="../../index.html" class="active" id="play">Play Quiz</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Start Quiz Button -->
+        <div id="start" style="display: none">Start Quiz!</div>
+
+        <!-- Quiz Container -->
+        <div id="quiz">
+            <div id="question">QQQQQQQQ</div>
+            <div id="choices">
+                <div class="choice" id="A" onclick="onPlayerSubmit('A')">AAAA</div>
+                <div class="choice" id="B" onclick="onPlayerSubmit('B')">BBBB</div>
+                <div class="choice" id="C" onclick="onPlayerSubmit('C')">CCCC</div>
+                <div class="choice" id="D" onclick="onPlayerSubmit('D')">DD</div>
+            </div>
+        </div>
+        <div id="scoreContainer" style="display: none"></div>
+    </div>
+</body>
+</html>
