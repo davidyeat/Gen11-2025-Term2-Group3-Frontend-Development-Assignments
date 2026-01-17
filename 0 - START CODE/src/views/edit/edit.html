@@ -20,8 +20,8 @@
                     <h1>Quiz App</h1>
                 </div>
                 <ul>
-                    <li><a href="#" class="active" id="edit">Edit Quiz</a></li>
-                    <li><a href="#" id="play">Play Quiz</a></li>
+                    <li><a href="../edit/edit.html" class="active" id="edit">Edit Quiz</a></li>
+                    <li><a href="../play/play.html" id="play">Play Quiz</a></li>
                 </ul>
             </nav>
         </div>
@@ -64,14 +64,31 @@
                 <h2>Create New Question</h2>
             </div>
             <div class="modal-body">
-                <label for="q-title">Title</label>
-                <input type="text" id="q-title" placeholder="Question title">
+                <!-- Question Inputs -->
+                <div class="question-inputs">
+                    <label for="q-title">Title</label>
+                    <input type="text" id="q-title" placeholder="Question title">
+                </div>
 
-                <label for="q-answer">Answer</label>
-                <input type="text" class="q-answer" placeholder="Answer A">
-                <input type="text" class="q-answer" placeholder="Answer B">
-                <input type="text" class="q-answer" placeholder="Answer C">
-                <input type="text" class="q-answer" placeholder="Answer D">
+                <!-- Answers Inputs -->
+                <div class="answer-inputs">
+                    <label for="q-answer">Answer</label>
+                    <input type="text" class="q-answer" placeholder="Answer A">
+                    <input type="text" class="q-answer" placeholder="Answer B">
+                    <input type="text" class="q-answer" placeholder="Answer C">
+                    <input type="text" class="q-answer" placeholder="Answer D">
+                </div>
+
+                <!-- Correct Answer Selection -->
+                <div class="select-correct-answer">
+                    <label>Select the correct answer:</label>
+                    <select name="correct-answer" id="correct-answer">
+                        <option value="0">Answer A</option>
+                        <option value="1">Answer B</option>
+                        <option value="2">Answer C</option>
+                        <option value="3">Answer D</option>
+                    </select>
+                </div>   
             </div>
             <div class="modal-footer">
                 <button id="cancel-btn">Cancel</button>
