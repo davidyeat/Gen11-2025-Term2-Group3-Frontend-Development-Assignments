@@ -1,3 +1,5 @@
+import {questions} from "../play/play.js";
+
 // Select modal and buttons
 const modal = document.querySelector("#question-modal");
 const btnAddQuestion = document.querySelector("#add-question-btn");
@@ -7,8 +9,10 @@ const btnCreate = document.querySelector("#create-btn");
 // Display modal when "Add Question" button is clicked
 btnAddQuestion.addEventListener("click", () => {
     // Clear previous inputs
+    // document.querySelector("#q-title").value = "";
+    // document.querySelectorAll(".q-answer").forEach(input => input.value = "");
+    console.log("Button Clicked!");
     document.querySelector("#q-title").value = "";
-    document.querySelectorAll(".q-answer").forEach(input => input.value = "");
     openModal();
 });
 
@@ -19,21 +23,16 @@ btnCancel.addEventListener("click", () => {
 
 // Handle "Create" button click
 btnCreate.addEventListener("click", () => {
-    const title = document.querySelector("#q-title").value;
-    const answers = Array.from(document.querySelectorAll(".q-answer")).map(input => input.value);
-
-    // Here you would typically add the new question to your data structure
-    console.log("New Question:", title);
-    console.log("Answers:", answers);
-    modal.style.display = "none";
+    onCreateQuestion();
+    closeModal();
 });
 
 // Modal control functions
 function closeModal() {
-    modal.style.display = "none";
+    modal.close();
 }
 function openModal() {
-    modal.style.display = "block";
+    modal.showModal();
 }
 
 // Create new question card function
@@ -41,13 +40,15 @@ function onCreateQuestion() {
     // Get input values
     const questionInput = document.getElementById("q-title");
     const answerInputs = document.querySelectorAll(".q-answer");
+    const correctAnswerSelect = document.getElementById("correct-answer");
 
-    // Validate inputs
+    // Validate inputs check if question or all answers are empty
     const question = questionInput.value;
     const answers = Array.from(answerInputs).map(input => input.value);
 
     // Prevent creating empty questions
-    if(question === "" && answers.every(text => text) === ""){
+    if(question === "" || answers.some(text => text.trim() === "")){
+        alert("Please fill in the question and all answer fields.");
         return;
     }
 
@@ -80,7 +81,7 @@ function onCreateQuestion() {
         choiceB: answers[1],
         choiceC: answers[2],
         choiceD: answers[3],
-        correct: "check"
+        correct: correctAnswerSelect.value
     });
 
     // Clear inputs

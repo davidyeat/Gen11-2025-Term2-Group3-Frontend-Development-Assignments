@@ -72,16 +72,24 @@
 
                 <!-- Answers Inputs -->
                 <div class="answer-inputs">
-                    <label for="q-answer">Answer</label>
-                    <input type="text" class="q-answer" placeholder="Answer A">
-                    <input type="text" class="q-answer" placeholder="Answer B">
-                    <input type="text" class="q-answer" placeholder="Answer C">
-                    <input type="text" class="q-answer" placeholder="Answer D">
+                    <p>Answer</p>
+
+                    <label for="ans-a"></label>
+                    <input type="text" id="ans-a" class="q-answer" placeholder="Answer A">
+
+                    <label for="ans-b"></label>
+                    <input type="text" id="ans-b" class="q-answer" placeholder="Answer B">
+
+                    <label for="ans-c"></label>
+                    <input type="text" id="ans-c" class="q-answer" placeholder="Answer C">
+
+                    <label for="ans-d"></label>
+                    <input type="text" id="ans-d" class="q-answer" placeholder="Answer D">
                 </div>
 
                 <!-- Correct Answer Selection -->
                 <div class="select-correct-answer">
-                    <label>Select the correct answer:</label>
+                    <label for="correct-answer">Select the correct answer:</label>
                     <select name="correct-answer" id="correct-answer">
                         <option value="0">Answer A</option>
                         <option value="1">Answer B</option>
@@ -96,7 +104,6 @@
             </div>
         </dialog>
     </div>
-
-    <script src="edit.js"></script>
+    <script type="module" src="edit.js"></script>
 </body>
 </html>

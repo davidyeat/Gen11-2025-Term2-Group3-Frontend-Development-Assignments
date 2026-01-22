@@ -37,6 +37,10 @@ let questions = [
     correct: "C",
   },
 ];
+
+// Load questions from localStorage
+
+
 let runningQuestionIndex = 0;
 let score = 0;
 
@@ -99,3 +103,5 @@ function renderScore() {
 show(dom_start);
 hide(dom_quiz);
 hide(dom_score);
+
+
