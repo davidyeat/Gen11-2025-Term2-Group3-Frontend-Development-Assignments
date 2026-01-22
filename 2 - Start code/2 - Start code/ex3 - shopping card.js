@@ -45,7 +45,7 @@ function getCartTotalAmount() {
 function addProductToCart(productId) {
   // Write your code here
   let item = SHOPPING_CART.find((i) => i.id === productId);
-  
+
   if (item) {
     item.quantity += 1;
   } else {
@@ -83,7 +83,7 @@ function removeProductFromCart(productId) {
       SHOPPING_CART.splice(itemIndex, 1);
     }
   } else {
-    // do nothing
+    return;
   }
 }
 
