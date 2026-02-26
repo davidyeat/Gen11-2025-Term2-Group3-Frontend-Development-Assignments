@@ -1,31 +1,51 @@
 /* Your data here */
-import shoes1 from "./assets/Nike_Air_Force_1_Low_07.jpg";
-import shoes2 from "./assets/Nike_Air_Force_1_Low_Dark_Grey_Black_Suede.jpg";
-import shoes3 from "./assets/Nike_Air_Force_1_Low_sneakers_Grey.jpg";
+import profile1 from './assets/1.png';
+import profile2 from './assets/2.png';
+import profile3 from './assets/3.png';
+import profile4 from './assets/4.png';
 
-export const AVAILABLE_SHOES = [
+export const userData = [
   {
-    id: 's1',
-    title: 'Nike Air Force 1 Low 07',
-    image: {
-      src: shoes1,
-      alt: 'Nike Air Force 1 Low 07'
-    }
+    id: "p1",
+    name: "John Doe",
+    role: "UI/UX Mobile Designer",
+    projects: 17,
+    following: 159,
+    followers: 205,
+    bio: "Passionate about creating seamless mobile experiences and clean minimalist interfaces.",
+    avatar: profile1,
   },
+
   {
-    id: 's2',
-    title: 'Nike Air Force 1 Low Dark Grey Black Suede',
-    image: {
-      src: shoes2,
-      alt: 'Nike Air Force 1 Low Dark Grey Black Suede'
-    }
+    id: "p2",
+    name: "Alibaba",
+    role: "Full Stack Developer",
+    projects: 24,
+    following: 250,
+    followers: 185,
+    bio: "Building scalable web applications with React and Node.js. Open source enthusiast.",
+    avatar: profile2,
   },
+
   {
-    id: 's3',
-    title: 'Nike Air Force 1 Low Sneakers Grey',
-    image: {
-      src: shoes3,
-      alt: 'Nike Air Force 1 Low Sneakers Grey'
-    }
+    id: "p3",
+    name: "Sarah",
+    role: "Product Manager",
+    projects: 42,
+    following: 310,
+    followers: 1200,
+    bio: "Bridging the gap between business goals and technical execution for SaaS products.",
+    avatar: profile3,
+  },
+
+  {
+    id: "p4",
+    name: "Jackson",
+    role: "Motion Graphics Artist",
+    projects: 12,
+    following: 95,
+    followers: 540,
+    bio: "Bringing static designs to life through 3D animation and cinematic visual effects.",
+    avatar: profile4,
   }
 ];
