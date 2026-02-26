@@ -55,7 +55,6 @@ const ProfileCard = ({ user }) => {
 
       {/* View Profile Button */}
       <button className="view-profile-btn">View Profile</button>
-
     </div>
   )
 }
