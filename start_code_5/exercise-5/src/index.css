@@ -28,3 +28,162 @@ body {
 header {
   text-align: center;
 }
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+.profile-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card-container {
+  background: #ffff;
+  width: 450px;
+  border-radius: 12px;
+  padding: 40px 35px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center; 
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-container:hover {
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.15);
+}
+
+.menu-dots span {
+  width: 4px;
+  height: 4px;
+  background: #333;
+  border-radius: 50%;
+}
+
+.menu-dots {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 120px;
+  margin: 0 auto 20px;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  
+}
+
+.verified-badge {
+  position: absolute;
+  background: #2ecc71;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(46, 204, 113, 0.4);
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.2));
+  bottom: 8px;
+  right: 8px;
+}
+
+.user-name {
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+}
+
+.user-role {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin: 5px 0 20px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  display: block;
+  color: #bbb;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-weight: 600;
+  color: #555;
+  font-size: 1.4rem;
+}
+
+.user-bio {
+  color: #999;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.4));
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.view-profile-btn {
+  width: 60%;
+  padding: 16px;
+  border-radius: 25px;
+  border: 1px solid #bbb;
+  background: white;
+  color: #888;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.view-profile-btn:hover {
+  background: #3ac1c8;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(58, 193, 200, 0.4);
+}

@@ -15,6 +15,7 @@ const ProfileCard = ({ user }) => {
       {/* Profile Image with Verified Badge */}
       <div className="avatar-wrapper">
         <img src={user.avatar} alt={user.name} className="profile-image"/>
+        <div className="verified-badge">✓</div>
       </div>
 
       {/* Name and Role */}
