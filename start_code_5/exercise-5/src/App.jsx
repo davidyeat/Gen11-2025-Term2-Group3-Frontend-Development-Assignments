@@ -1,22 +1,18 @@
-import Shoes from "./components/Shoes.jsx";
-import { AVAILABLE_SHOES } from "./data.js";
+import ProfileCard from "./components/ProfileCard.jsx";
+import { userData } from "./data.js";
 
 function App() {
   return (
     <>
       <header>
-        <h1>ShoePicker</h1>
-        <p>Which shoes would you like to see?</p>
+        <h1>PROFILE CARD</h1>
       </header>
       <main>
-        <section className="shoes-category">
-          <ul className="shoes">
-            {/* For each shoe from AVAILABLE_SHOES, create a Shoes component */}
-            {AVAILABLE_SHOES.map((shoe) => (
-              <Shoes key={shoe.id} shoe={shoe} />
-            ))}
-          </ul>
-        </section>
+        <div className="profile-grid">
+          {userData.map((user) => (
+            <ProfileCard key={user.id} user={user} />
+          ))}
+        </div>
       </main>
     </>
   );
