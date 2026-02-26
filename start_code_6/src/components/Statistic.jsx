@@ -12,10 +12,12 @@ const Statistic = ({courseResults}) => {
 					<span className="label">Average</span>
 					<span className="value">{average.toFixed(2)}</span>
 				</div>
+
 				<div className="stats">
 					<span className="label">Minimum</span>
 					<span className="value">{min}</span>
 				</div>
+
 				<div className="stats">
 					<span className="label">Maximum</span>
 					<span className="value">{max}</span>
