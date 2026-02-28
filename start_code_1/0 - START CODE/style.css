@@ -21,7 +21,7 @@ body {
 }
 
 #quiz {
-  width: 800px;
+  width: 900px;
   max-width: 80%;
   background-color: white;
   border-radius: 20px;
@@ -29,29 +29,27 @@ body {
 }
 
 #question {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 #choices {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  margin: 20px 0;
-  justify-content: center;
+  margin: 20px 10px;
+  justify-content: space-between;
   align-items: center;
 }
 
 .choice {
   display: inline-block;
-  width: 135px;
   text-align: center;
   border: 1px solid grey;
   border-radius: 5px;
   cursor: pointer;
   padding: 5px;
 }
+
 .choice:hover {
   border: 1px solid rgb(15, 15, 15);
 }
@@ -61,3 +59,16 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+#scoreContainer p {
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -10px;
+}
+
+#scoreContainer h2 {
+  font-size: 2rem;
+}
+
+
