@@ -2,6 +2,10 @@
 
 /* Edit Quiz style -----------------------------------------*/
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .edit-container {
     padding: 2rem 10%;
     margin: 10% auto;
@@ -35,7 +39,7 @@
     background-color: var(--secondary-color);
 }
 
-.question-list {
+#question-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -78,7 +82,7 @@
     border-radius: 50%;
 }
 
-dialog {
+#addQuiz-container {
     border: none;
     border-radius: 8px;
     padding: 0;
@@ -90,7 +94,7 @@ dialog {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.modal-header {
+#addQuiz-container h2 {
     background-color: #800080; /* Purple */
     color: white;
     padding: 15px;
@@ -99,59 +103,75 @@ dialog {
     text-align: center;
 }
 
-.modal-body {
+.questionForm {
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.question-inputs {
+.question-input {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     margin-bottom: 20px;
 }
 
-.answer-inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.select-correct-answer {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-#correct-answer {
-    padding: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1.6rem;
-}
-
-.modal-body label {
+.question-input label, h3 {
     font-size: 2rem;
     font-weight: 600;
 }
 
-.modal-body input {
-    padding: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1.6rem;
+.answer-item {
+    position: relative;
+    display: flex;
+    gap: 10px;
+} 
+
+.check-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #28a745;
+    font-size: 20px;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 6px rgba(34, 197, 94, 0.3);
+    border: 1px solid #28a745;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.modal-footer {
-    padding: 15px;
-    text-align: right;
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 0 5px rgba(40, 167, 69, 0.4); */
+    border-radius: 5px;
 }
 
-.modal-footer button {
+input:focus {
+    outline: none; 
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.25);
+}
+
+.answer-item input[type="radio"] {
+    margin-right: 10px;
+}
+
+.toggle-btn {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.toggle-btn button {
     padding: 16px 32px;
     margin-left: 10px;
     border: none;
@@ -160,15 +180,10 @@ dialog {
     border-radius: 4px;
     cursor: pointer;
     font-size: 1.8rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
 }
-.modal-footer button:hover {
-    background-color: var(--primary-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.toggle-btn button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
-
-/* Styling the backdrop (the area behind the popup) */
-dialog::backdrop {
-    background: rgba(0, 0, 0, 0.5);
-}
-/* ---------------------------------------------------------*/

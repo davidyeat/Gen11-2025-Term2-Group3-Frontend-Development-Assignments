@@ -155,7 +155,7 @@ function renderScore() {
   // Clear old textContent
   dom_score.innerHTML = "";
 
-  // Create emoji span
+  // Create emoji paragraph
   const emoji = document.createElement("p");
   emoji.textContent = getEmoji(totalScore);
 

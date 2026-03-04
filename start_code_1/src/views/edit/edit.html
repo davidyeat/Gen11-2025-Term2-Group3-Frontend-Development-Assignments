@@ -31,7 +31,7 @@
             <div class="edit-header">
                 <button id="add-question-btn">Add Question</button>
             </div>
-            <div class="question-list">
+            <div id="question-list">
                 <div class="question-item">
                     <p>What does HTML stand for?</p>
                     <div class="features">
@@ -58,51 +58,45 @@
             </div>
         </div>
 
-        <!-- Modal for Adding Question -------------------------->
-        <dialog id="question-modal">
-            <div class="modal-header">
-                <h2>Create New Question</h2>
+        <!-- Popup for Adding Question -------------------------->
+        <div id="addQuiz-container" style="display: none;">
+          <h2>Create New Question</h2>
+
+          <form action="#" class="questionForm">
+            <div class="question-input">
+              <label for="title">Title</label>
+              <input type="text" id="title" placeholder="Question title" required>
             </div>
-            <div class="modal-body">
-                <!-- Question Inputs -->
-                <div class="question-inputs">
-                    <label for="q-title">Title</label>
-                    <input type="text" id="q-title" placeholder="Question title">
-                </div>
 
-                <!-- Answers Inputs -->
-                <div class="answer-inputs">
-                    <p>Answer</p>
+            <h3>Answers</h3>
 
-                    <label for="ans-a"></label>
-                    <input type="text" id="ans-a" class="q-answer" placeholder="Answer A">
-
-                    <label for="ans-b"></label>
-                    <input type="text" id="ans-b" class="q-answer" placeholder="Answer B">
-
-                    <label for="ans-c"></label>
-                    <input type="text" id="ans-c" class="q-answer" placeholder="Answer C">
-
-                    <label for="ans-d"></label>
-                    <input type="text" id="ans-d" class="q-answer" placeholder="Answer D">
-                </div>
-
-                <!-- Correct Answer Selection -->
-                <div class="select-correct-answer">
-                    <label for="correct-answer">Select the correct answer:</label>
-                    <select name="correct-answer" id="correct-answer">
-                        <option value="0">Answer A</option>
-                        <option value="1">Answer B</option>
-                        <option value="2">Answer C</option>
-                        <option value="3">Answer D</option>
-                    </select>
-                </div>   
+            <div class="answer-item">
+              <input id="answerA" type="text" placeholder="Answer A" required>
+              <span class="check-icon">&#10003;</span>
             </div>
-            <div class="modal-footer">
-                <button id="cancel-btn">Cancel</button>
-                <button id="create-btn">Create</button>
+
+            <div class="answer-item">
+              <input id="answerB" type="text" placeholder="Answer B" required>
+              <span class="check-icon">&#10003;</span>
             </div>
-        </dialog>
+
+            <div class="answer-item">
+              <input id="answerC" type="text" placeholder="Answer C" required>
+              <span class="check-icon">&#10003;</span>
+            </div>
+
+            <div class="answer-item">
+              <input id="answerD" type="text" placeholder="Answer D" required>
+              <span class="check-icon">&#10003;</span>
+            </div>
+          </form>
+          <div class="toggle-btn">
+            <button id="create-btn">Create</button>
+            <button id="cancel-btn">Cancel</button>
+          </div>
+        </div>
+
+
     </div>
     <script type="module" src="edit.js"></script>
 </body>

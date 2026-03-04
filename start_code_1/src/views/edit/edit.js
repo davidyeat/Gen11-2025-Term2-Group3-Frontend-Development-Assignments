@@ -1,30 +1,31 @@
-import {questions} from "../play/play.js";
+import { QUIZ_DATA } from "../../model/data.js";
 
 // Select modal and buttons
-const modal = document.querySelector("#question-modal");
-const btnAddQuestion = document.querySelector("#add-question-btn");
-const btnCancel = document.querySelector("#cancel-btn");
-const btnCreate = document.querySelector("#create-btn");
+const dom_btnAddQuestion = document.querySelector("#add-question-btn");
+const popup = document.querySelector("#addQuiz-container");
+const dom_title = document.querySelector("#title");
+const dom_answerA = document.querySelector("#answerA");
+const dom_answerB = document.querySelector("#answerB");
+const dom_answerC = document.querySelector("#answerC");
+const dom_answerD = document.querySelector("#answerD");
+const dom_btnCancel = document.querySelector("#cancel-btn");
+const dom_btnCreate = document.querySelector("#create-btn");
 
-// Display modal when "Add Question" button is clicked
-btnAddQuestion.addEventListener("click", () => {
-    // Clear previous inputs
-    // document.querySelector("#q-title").value = "";
-    // document.querySelectorAll(".q-answer").forEach(input => input.value = "");
-    console.log("Button Clicked!");
-    document.querySelector("#q-title").value = "";
-    openModal();
+
+// Open popup when click add question button -----------------------------------
+dom_btnAddQuestion.addEventListener("click", () => {
+  popup.style.display = "block";
 });
 
-// Hide modal when "Cancel" button is clicked
-btnCancel.addEventListener("click", () => {
-    closeModal();
+// Hide modal when "Cancel" button is clicked ----------------------------------
+dom_btnCancel.addEventListener("click", () => {
+  popup.style.display = "none";
 });
 
-// Handle "Create" button click
-btnCreate.addEventListener("click", () => {
+// Handle "Create" button click ------------------------------------------------
+dom_btnCreate.addEventListener("click", () => {
     onCreateQuestion();
-    closeModal();
+    popup.style.display = "none";
 });
 
 // Modal control functions
@@ -35,58 +36,63 @@ function openModal() {
     modal.showModal();
 }
 
-// Create new question card function
+// Create new question card function -------------------------------------------
 function onCreateQuestion() {
     // Get input values
-    const questionInput = document.getElementById("q-title");
-    const answerInputs = document.querySelectorAll(".q-answer");
-    const correctAnswerSelect = document.getElementById("correct-answer");
+    const questionInput = dom_title.value.trim();
+    const answerA_input = dom_answerA.value.trim();
+    const answerB_input = dom_answerB.value.trim();
+    const answerC_input = dom_answerC.value.trim();
+    const answerD_input = dom_answerD.value.trim();
 
-    // Validate inputs check if question or all answers are empty
-    const question = questionInput.value;
-    const answers = Array.from(answerInputs).map(input => input.value);
-
-    // Prevent creating empty questions
-    if(question === "" || answers.some(text => text.trim() === "")){
-        alert("Please fill in the question and all answer fields.");
+    // Validate inputs check if question or all answers are empty --------------
+    if (questionInput === "" ||
+        answerA_input === "" ||
+        answerB_input === "" ||
+        answerC_input === "" ||
+        answerD_input === "" 
+    ) {
+        alert("Please fill in the question and all answer fields!");
         return;
     }
 
-    // Create question card element
-    const questionCard = document.createElement("div");
-    questionCard.className = "question-item";
+    // Create question item ----------------------------------------------------
+    const questionItem = document.createElement("div");
+    questionItem.classList.add("question-item");
 
-    // Create question title
-    const questionItem = document.createElement("p");
-    questionItem.textContent = question;
+    // Create question title ---------------------------------------------------
+    const question_description = document.createElement("p");
+    question_description.textContent = questionInput;
 
-    // Append title to card
-    questionCard.appendChild(questionItem);
+    // Append question paragraph to question item ------------------------------
+    questionItem.appendChild(question_description);
 
-    // Add edit and delete features
-    questionCard.innerHTML += `
-        <div class="features">
-            <i class='bxr bx-edit edit-question'></i> 
-            <i class='bxr bx-trash delete-question'></i> 
-        </div>
+    // Add edit and delete features --------------------------------------------
+    questionItem.innerHTML += `
+      <div class="features">
+        <i class='bxr bx-edit edit-question'></i> 
+        <i class='bxr bx-trash delete-question'></i> 
+      </div>
     `;
 
-    // Append question card to question list
-    document.getElementById("question-list").appendChild(questionCard);
+    // Append question item to question list -----------------------------------
+    document.getElementById("question-list").appendChild(questionItem);
 
-    // Add question and answers to array
-    questions.push({
-        title: question,
-        choiceA: answers[0],
-        choiceB: answers[1],
-        choiceC: answers[2],
-        choiceD: answers[3],
-        correct: correctAnswerSelect.value
+    // Add question and answers to array ---------------------------------------
+    QUIZ_DATA.push({
+      title: questionInput,
+      choiceA: answerA_input,
+      choiceB: answerB_input,
+      choiceC: answerC_input,
+      choiceD: answerD_input,
     });
 
-    // Clear inputs
+    // Clear inputs 
     questionInput.value = "";
-    Array.from(answerInputs).forEach(input => input.value = "");
+    answerA_input.value = "";
+    answerB_input.value = "";
+    answerC_input.value = "";
+    answerD_input.value = "";
 }
 
 function onCorrectAnswer(selectedAnswer) {
